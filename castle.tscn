@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://vccoexa582jt"]
+
+[node name="castle" type="Area2D" unique_id=2003675483]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1234293006]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1050349656]
