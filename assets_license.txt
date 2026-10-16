@@ -1,0 +1,1 @@
+This pack contains imported/generated raster pixels, procedural UI/effects and synthesized audio. Per-asset origin records identify source and recipe hashes. Source artwork rights follow their original provenance; no blanket CC0 claim is made for imported/generated raster art. Procedural code and third-party dependencies retain their respective licenses.

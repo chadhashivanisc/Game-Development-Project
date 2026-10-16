@@ -1,0 +1,11 @@
+[gd_scene format=3]
+[ext_resource type="SpriteFrames" path="res://assets/enemies/soulflame_hound/soulflame_hound_frames.tres" id="frames"]
+[node name="SoulflameHound" type="Node2D"]
+texture_filter = 1
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("frames")
+centered = false
+position = Vector2(-104, -148.8)
+scale = Vector2(1, 1)
+animation = &"idle"
+autoplay = "idle"

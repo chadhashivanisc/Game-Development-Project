@@ -1,0 +1,11 @@
+[gd_scene format=3]
+[ext_resource type="SpriteFrames" path="res://assets/projectiles/rune_shell/rune_shell_frames.tres" id="frames"]
+[node name="RuneShell" type="Node2D"]
+texture_filter = 1
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("frames")
+centered = false
+position = Vector2(-48, -48)
+scale = Vector2(1, 1)
+animation = &"fly"
+autoplay = "fly"

@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Kingdom defense project"
+run/main_scene="res://scenes/asset_showcase.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1024
+window/size/window_width_override=1500
+window/size/window_height_override=800
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [physics]
 
@@ -25,4 +29,5 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0.025, 0.035, 0.055, 1)
 rendering_device/driver.windows="d3d12"

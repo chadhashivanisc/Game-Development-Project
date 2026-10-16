@@ -1,0 +1,9 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://assets/props/soul_crystal/soul_crystal.png" id="texture"]
+[node name="SoulCrystal" type="Node2D"]
+texture_filter = 1
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("texture")
+centered = false
+position = Vector2(-56, -117.76)
+scale = Vector2(1, 1)
