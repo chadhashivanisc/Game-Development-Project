@@ -7,6 +7,7 @@ extends Node2D
 @export var attack_range: float = 300.0
 @export var art_scene: PackedScene
 @export var art_scale: float = 0.45
+@export var projectile_scene: PackedScene
 
 var targets: Array = []
 var cooldown: float = 0.0
@@ -41,5 +42,17 @@ func _process(delta: float) -> void:
 	targets = targets.filter(func(t): return is_instance_valid(t))
 	cooldown -= delta
 	if cooldown <= 0.0 and targets.size() > 0:
-		targets[0].take_damage(damage)
+		fire(targets[0])
 		cooldown = 1.0 / fire_rate
+
+
+func fire(t: Node2D) -> void:
+	if projectile_scene == null:
+		t.take_damage(damage)
+		return
+
+	var p := projectile_scene.instantiate()
+	get_parent().add_child(p)
+	p.global_position = global_position + Vector2(30, -10)
+	p.damage = damage
+	p.target = t

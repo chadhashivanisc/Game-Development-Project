@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dvyjn8teds61p"]
+
+[ext_resource type="Script" uid="uid://c0kf2mlqelawq" path="res://projectile.gd" id="1_d4ir6"]
+[ext_resource type="PackedScene" path="res://assets/projectiles/ember_bolt/ember_bolt.tscn" id="2_1cimi"]
+[ext_resource type="PackedScene" path="res://assets/effects/ember_impact/ember_impact.tscn" id="3_4a7xh"]
+
+[node name="projectile" type="Node2D" unique_id=1735637441]
+script = ExtResource("1_d4ir6")
+art_scene = ExtResource("2_1cimi")
+impact_scene = ExtResource("3_4a7xh")
