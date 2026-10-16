@@ -4,8 +4,8 @@ signal wave_started(wave_number)
 signal wave_cleared(wave_number)
 signal all_waves_done
 
-@export var lane_ys: Array[int] = [145, 235, 325, 415, 505]
-@export var spawn_x: float = 1100.0
+@export var lane_ys: Array[int] = [464, 571, 678, 785]
+@export var spawn_x: float = 1500.0
 
 var enemy_scene := preload("res://enemy.tscn")
 

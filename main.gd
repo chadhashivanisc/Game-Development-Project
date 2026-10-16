@@ -9,6 +9,10 @@ func _ready() -> void:
 	spawner.wave_cleared.connect(_on_wave_cleared)
 	spawner.all_waves_done.connect(_on_all_done)
 
+	for child in get_children():
+		if child is Node2D:
+			print(child.name, "  pos=", child.position, "  global=", child.global_position, "  scale=", child.scale)
+
 
 func _on_start_pressed() -> void:
 	start_button.disabled = true

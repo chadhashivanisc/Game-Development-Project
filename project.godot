@@ -21,6 +21,8 @@ GameState="*uid://bjb6vmm80aifo"
 
 [display]
 
+window/size/viewport_width=1536
+window/size/viewport_height=1024
 window/stretch/mode="canvas_items"
 
 [physics]

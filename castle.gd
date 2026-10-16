@@ -9,18 +9,10 @@ signal game_over
 
 func _ready() -> void:
 	lives = max_lives
-	global_position = Vector2(100, 324)
-
-	var poly := Polygon2D.new()
-	poly.polygon = PackedVector2Array([
-		Vector2(-30, -324), Vector2(30, -324),
-		Vector2(30, 324), Vector2(-30, 324)
-	])
-	poly.color = Color(0.2, 0.4, 1.0)
-	add_child(poly)
+	global_position = Vector2(100, 512)
 
 	var shape := RectangleShape2D.new()
-	shape.size = Vector2(60, 648)
+	shape.size = Vector2(60, 1024)
 	var col := CollisionShape2D.new()
 	col.shape = shape
 	add_child(col)
