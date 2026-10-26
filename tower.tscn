@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cqhfsgh54umwk"]
+
+[ext_resource type="Script" uid="uid://bh5umwjvxfgtg" path="res://tower.gd" id="1_k1sas"]
+[ext_resource type="PackedScene" path="res://assets/structures/ember_brazier/ember_brazier.tscn" id="2_vedim"]
+[ext_resource type="PackedScene" uid="uid://dvyjn8teds61p" path="res://ember_projectile.tscn" id="3_stebd"]
+
+[node name="tower" type="Node2D" unique_id=1926975032]
+script = ExtResource("1_k1sas")
+art_scene = ExtResource("2_vedim")
+projectile_scene = ExtResource("3_stebd")
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=1831444832]

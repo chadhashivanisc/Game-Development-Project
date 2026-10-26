@@ -1,0 +1,2288 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/stone_base.png" id="stone-base"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/lower_masonry.png" id="lower-masonry"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/main_support.png" id="main-support"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/thorn_branch.png" id="thorn-branch"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/lantern_hinge.png" id="lantern-hinge"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/short_chain.png" id="short-chain"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/attack_lantern.png" id="attack-lantern"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/rune_ring.png" id="rune-ring"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/soul_vessel.png" id="soul-vessel"]
+[ext_resource type="Texture2D" path="res://assets/structures/soul_harvester/parts/spectral_flame.png" id="spectral-flame"]
+[sub_resource type="Animation" id="anim_idle"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.4, 0.8), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, -0.784), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.4, 0.8), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.4, 0.8), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1.05), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.4, 0.8), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.8), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="anim_charge"]
+resource_name = "charge"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, -0.0523599, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, -1.176), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1.14, 1.14), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="anim_aim"]
+resource_name = "aim"
+length = 0.6
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.1666667, 0.3333333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(13, -2), Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.1666667, 0.3333333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [0, -0.0872665, 0.0523599, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.1666667, 0.3333333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.1666667, 0.3333333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="anim_fire"]
+resource_name = "fire"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(9.36, -2), Vector2(14.68, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [0, -0.0698132, 0, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [0, 0, 0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1.16, 1.2), Vector2(0.9, 0.9), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="anim_pulse"]
+resource_name = "pulse"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1.17, 1.15), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="anim_hit"]
+resource_name = "hit"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(11.04, -2), Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [0, 0.0698132, -0.0523599, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.2333333, 0.4666667, 0.7), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(0.87, 1.1), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="anim_death"]
+resource_name = "death"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -17.55), Vector2(-52, -16.08)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0.0698132, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.85, 0.85)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -47.55), Vector2(21, -46.08)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0.0698132, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.85, 0.85)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -53.55), Vector2(-15, -52.08)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0.0698132, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.85, 0.85)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -73.55), Vector2(-15, -72.08)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0.0698132, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.85, 0.85)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0)]}
+
+[sub_resource type="Animation" id="anim_produce"]
+resource_name = "produce"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Rig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, 0)]}
+
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Rig:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Rig:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Rig:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Rig/StoneBase:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -17), Vector2(-21, -17)]}
+
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skeleton2D/Rig/StoneBase:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skeleton2D/Rig/StoneBase:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skeleton2D/Rig/StoneBase:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skeleton2D/Rig/LowerMasonry:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-21, -31), Vector2(-21, -31)]}
+
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skeleton2D/Rig/LowerMasonry:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skeleton2D/Rig/LowerMasonry:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skeleton2D/Rig/LowerMasonry:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skeleton2D/Rig/MainSupport:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -51), Vector2(-15, -51)]}
+
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skeleton2D/Rig/MainSupport:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skeleton2D/Rig/MainSupport:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skeleton2D/Rig/MainSupport:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/16/type = "value"
+tracks/16/path = NodePath("Skeleton2D/Rig/ThornBranch:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-52, -20), Vector2(-52, -20)]}
+
+tracks/17/type = "value"
+tracks/17/path = NodePath("Skeleton2D/Rig/ThornBranch:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/18/type = "value"
+tracks/18/path = NodePath("Skeleton2D/Rig/ThornBranch:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/19/type = "value"
+tracks/19/path = NodePath("Skeleton2D/Rig/ThornBranch:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/20/type = "value"
+tracks/20/path = NodePath("Skeleton2D/Rig/LanternHinge:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(21, -50), Vector2(21, -50)]}
+
+tracks/21/type = "value"
+tracks/21/path = NodePath("Skeleton2D/Rig/LanternHinge:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/22/type = "value"
+tracks/22/path = NodePath("Skeleton2D/Rig/LanternHinge:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/23/type = "value"
+tracks/23/path = NodePath("Skeleton2D/Rig/LanternHinge:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/24/type = "value"
+tracks/24/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(7, 12), Vector2(7, 12)]}
+
+tracks/25/type = "value"
+tracks/25/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/26/type = "value"
+tracks/26/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/27/type = "value"
+tracks/27/path = NodePath("Skeleton2D/Rig/LanternHinge/ShortChain:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/28/type = "value"
+tracks/28/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(13, -2), Vector2(13, -2)]}
+
+tracks/29/type = "value"
+tracks/29/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/30/type = "value"
+tracks/30/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/31/type = "value"
+tracks/31/path = NodePath("Skeleton2D/Rig/LanternHinge/AttackLantern:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/32/type = "value"
+tracks/32/path = NodePath("Skeleton2D/Rig/RuneRing:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -56), Vector2(-15, -56)]}
+
+tracks/33/type = "value"
+tracks/33/path = NodePath("Skeleton2D/Rig/RuneRing:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/34/type = "value"
+tracks/34/path = NodePath("Skeleton2D/Rig/RuneRing:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/35/type = "value"
+tracks/35/path = NodePath("Skeleton2D/Rig/RuneRing:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/36/type = "value"
+tracks/36/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, -1.764), Vector2(0, 0)]}
+
+tracks/37/type = "value"
+tracks/37/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [0, 0, 0]}
+
+tracks/38/type = "value"
+tracks/38/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:scale")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1.15, 1.2), Vector2(1, 1)]}
+
+tracks/39/type = "value"
+tracks/39/path = NodePath("Skeleton2D/Rig/RuneRing/SoulVessel:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {"times": PackedFloat32Array(0, 0.35, 0.7), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+tracks/40/type = "value"
+tracks/40/path = NodePath("Skeleton2D/Rig/SpectralFlame:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-15, -76), Vector2(-15, -76)]}
+
+tracks/41/type = "value"
+tracks/41/path = NodePath("Skeleton2D/Rig/SpectralFlame:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0, 0]}
+
+tracks/42/type = "value"
+tracks/42/path = NodePath("Skeleton2D/Rig/SpectralFlame:scale")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1, 1)]}
+
+tracks/43/type = "value"
+tracks/43/path = NodePath("Skeleton2D/Rig/SpectralFlame:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {"times": PackedFloat32Array(0, 0.7), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]}
+
+[sub_resource type="AnimationLibrary" id="library"]
+_data = {&"idle": SubResource("anim_idle"), &"charge": SubResource("anim_charge"), &"aim": SubResource("anim_aim"), &"fire": SubResource("anim_fire"), &"pulse": SubResource("anim_pulse"), &"hit": SubResource("anim_hit"), &"death": SubResource("anim_death"), &"produce": SubResource("anim_produce")}
+[node name="SoulHarvesterCutout" type="Node2D"]
+texture_filter = 1
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+[node name="Rig" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 8.0
+
+[node name="StoneBase" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(-21, -17)
+rest = Transform2D(1, 0, 0, 1, -21, -17)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/StoneBase"]
+texture = ExtResource("stone-base")
+z_index = 0
+centered = false
+position = Vector2(-75, -131)
+scale = Vector2(1, 1)
+
+[node name="LowerMasonry" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(-21, -31)
+rest = Transform2D(1, 0, 0, 1, -21, -31)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/LowerMasonry"]
+texture = ExtResource("lower-masonry")
+z_index = 1
+centered = false
+position = Vector2(-75, -117)
+scale = Vector2(1, 1)
+
+[node name="MainSupport" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(-15, -51)
+rest = Transform2D(1, 0, 0, 1, -15, -51)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/MainSupport"]
+texture = ExtResource("main-support")
+z_index = 2
+centered = false
+position = Vector2(-81, -97)
+scale = Vector2(1, 1)
+
+[node name="ThornBranch" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(-52, -20)
+rest = Transform2D(1, 0, 0, 1, -52, -20)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/ThornBranch"]
+texture = ExtResource("thorn-branch")
+z_index = 3
+centered = false
+position = Vector2(-44, -128)
+scale = Vector2(1, 1)
+
+[node name="LanternHinge" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(21, -50)
+rest = Transform2D(1, 0, 0, 1, 21, -50)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/LanternHinge"]
+texture = ExtResource("lantern-hinge")
+z_index = 4
+centered = false
+position = Vector2(-117, -98)
+scale = Vector2(1, 1)
+
+[node name="RuneRing" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(-15, -56)
+rest = Transform2D(1, 0, 0, 1, -15, -56)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/RuneRing"]
+texture = ExtResource("rune-ring")
+z_index = 7
+centered = false
+position = Vector2(-81, -92)
+scale = Vector2(1, 1)
+
+[node name="SpectralFlame" type="Bone2D" parent="Skeleton2D/Rig"]
+position = Vector2(-15, -76)
+rest = Transform2D(1, 0, 0, 1, -15, -76)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/SpectralFlame"]
+texture = ExtResource("spectral-flame")
+z_index = 9
+centered = false
+position = Vector2(-81, -72)
+scale = Vector2(1, 1)
+
+[node name="ShortChain" type="Bone2D" parent="Skeleton2D/Rig/LanternHinge"]
+position = Vector2(7, 12)
+rest = Transform2D(1, 0, 0, 1, 7, 12)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/LanternHinge/ShortChain"]
+texture = ExtResource("short-chain")
+z_index = 5
+centered = false
+position = Vector2(-124, -110)
+scale = Vector2(1, 1)
+
+[node name="AttackLantern" type="Bone2D" parent="Skeleton2D/Rig/LanternHinge"]
+position = Vector2(13, -2)
+rest = Transform2D(1, 0, 0, 1, 13, -2)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/LanternHinge/AttackLantern"]
+texture = ExtResource("attack-lantern")
+z_index = 6
+centered = false
+position = Vector2(-130, -96)
+scale = Vector2(1, 1)
+
+[node name="SoulVessel" type="Bone2D" parent="Skeleton2D/Rig/RuneRing"]
+position = Vector2(0, 0)
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 5.0
+[node name="Pixels" type="Sprite2D" parent="Skeleton2D/Rig/RuneRing/SoulVessel"]
+texture = ExtResource("soul-vessel")
+z_index = 8
+centered = false
+position = Vector2(-81, -92)
+scale = Vector2(1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("library")}
+autoplay = "idle"

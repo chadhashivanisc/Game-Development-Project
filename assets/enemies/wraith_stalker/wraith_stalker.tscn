@@ -1,0 +1,11 @@
+[gd_scene format=3]
+[ext_resource type="SpriteFrames" path="res://assets/enemies/wraith_stalker/wraith_stalker_frames.tres" id="frames"]
+[node name="WraithStalker" type="Node2D"]
+texture_filter = 1
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("frames")
+centered = false
+position = Vector2(-96, -163.68)
+scale = Vector2(1, 1)
+animation = &"idle"
+autoplay = "idle"

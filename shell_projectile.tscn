@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rmntckqqnmok"]
+
+[ext_resource type="Script" uid="uid://c0kf2mlqelawq" path="res://projectile.gd" id="1_mwclj"]
+[ext_resource type="PackedScene" path="res://assets/projectiles/rune_shell/rune_shell.tscn" id="2_mwclj"]
+[ext_resource type="PackedScene" path="res://assets/effects/rune_impact/rune_impact.tscn" id="3_bfycj"]
+
+[node name="projectile" type="Node2D" unique_id=1735637441]
+script = ExtResource("1_mwclj")
+art_scene = ExtResource("2_mwclj")
+impact_scene = ExtResource("3_bfycj")

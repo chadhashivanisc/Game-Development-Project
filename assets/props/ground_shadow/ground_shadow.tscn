@@ -1,0 +1,9 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://assets/props/ground_shadow/ground_shadow.png" id="texture"]
+[node name="GroundShadow" type="Node2D"]
+texture_filter = 1
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("texture")
+centered = false
+position = Vector2(-48, -76.80000000000001)
+scale = Vector2(1, 1)

@@ -1,0 +1,11 @@
+[gd_scene format=3]
+[ext_resource type="SpriteFrames" path="res://assets/structures/soul_lantern_shrine/soul_lantern_shrine_frames.tres" id="frames"]
+[node name="SoulLanternShrine" type="Node2D"]
+texture_filter = 1
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("frames")
+centered = false
+position = Vector2(-96, -148)
+scale = Vector2(1, 1)
+animation = &"idle"
+autoplay = "idle"
