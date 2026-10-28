@@ -4,6 +4,8 @@ extends Area2D
 @export var damage: int = 10
 @export var max_health: int = 30
 @export var gold_reward: int = 20
+@export var art_scene: PackedScene
+@export var art_scale: float = 0.45
 
 var health: int
 
@@ -12,16 +14,13 @@ func _ready() -> void:
 	add_to_group("enemies")
 	health = max_health
 
-	var poly := Polygon2D.new()
-	poly.polygon = PackedVector2Array([
-		Vector2(-16, -16), Vector2(16, -16),
-		Vector2(16, 16), Vector2(-16, 16)
-	])
-	poly.color = Color(0.9, 0.2, 0.2)
-	add_child(poly)
+	if art_scene:
+		var art := art_scene.instantiate()
+		art.scale = Vector2(art_scale, art_scale)
+		add_child(art)
 
 	var shape := RectangleShape2D.new()
-	shape.size = Vector2(32, 32)
+	shape.size = Vector2(60, 60)
 	var col := CollisionShape2D.new()
 	col.shape = shape
 	add_child(col)

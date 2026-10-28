@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c4rusnyktnke7"]
+
+[ext_resource type="Script" uid="uid://ds5lhtfiyolhr" path="res://enemy.gd" id="1_nqqyr"]
+[ext_resource type="PackedScene" path="res://assets/enemies/soulflame_hound/soulflame_hound.tscn" id="2_nqqyr"]
+
+[node name="enemy" type="Area2D" unique_id=1109625214 groups=["enemy"]]
+script = ExtResource("1_nqqyr")
+speed = 130.0
+max_health = 20
+gold_reward = 15
+art_scene = ExtResource("2_nqqyr")
