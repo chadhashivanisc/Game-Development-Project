@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var spawner := $spawner
-@onready var start_button := $UI/Button
+@onready var start_button := $"UI/Bottom Bar/Button"
 
 
 func _ready() -> void:
