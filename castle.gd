@@ -27,6 +27,8 @@ func _on_area_entered(area: Area2D) -> void:
 
 
 func lose_life() -> void:
+	if lives <= 0:
+		return
 	lives -= 1
 	lives_changed.emit(lives)
 	print("Lives left: ", lives)
