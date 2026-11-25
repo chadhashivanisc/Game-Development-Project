@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bxwo6xjutf04q"]
+
+[ext_resource type="Script" uid="uid://bh5umwjvxfgtg" path="res://tower.gd" id="1_fh8mu"]
+[ext_resource type="PackedScene" path="res://assets/structures/frost_reliquary/frost_reliquary.tscn" id="2_fh8mu"]
+[ext_resource type="PackedScene" uid="uid://cysye1wctqmxu" path="res://frost_projectile.tscn" id="3_nfo3q"]
+
+[node name="frost_tower" type="Node2D" unique_id=1926975032]
+script = ExtResource("1_fh8mu")
+cost = 200
+damage = 8
+fire_rate = 1.2
+attack_range = 260.0
+art_scene = ExtResource("2_fh8mu")
+projectile_scene = ExtResource("3_nfo3q")
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=1831444832]

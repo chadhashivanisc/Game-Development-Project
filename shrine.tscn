@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b61vdnkes71fe"]
+
+[ext_resource type="Script" uid="uid://bh5umwjvxfgtg" path="res://tower.gd" id="1_fagqx"]
+[ext_resource type="PackedScene" path="res://assets/structures/soul_lantern_shrine/soul_lantern_shrine.tscn" id="2_fagqx"]
+[ext_resource type="PackedScene" uid="uid://cy336mef8ofty" path="res://soul_projectile.tscn" id="3_wwafo"]
+
+[node name="shrine" type="Node2D" unique_id=1926975032]
+script = ExtResource("1_fagqx")
+cost = 250
+damage = 35
+fire_rate = 0.6
+attack_range = 280.0
+art_scene = ExtResource("2_fagqx")
+projectile_scene = ExtResource("3_wwafo")
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=1831444832]

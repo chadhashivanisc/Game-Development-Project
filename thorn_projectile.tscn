@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://mu1ncv5vwuos"]
+
+[ext_resource type="Script" uid="uid://c0kf2mlqelawq" path="res://projectile.gd" id="1_gt2s4"]
+[ext_resource type="PackedScene" path="res://assets/projectiles/thorn_quill/thorn_quill.tscn" id="2_gt2s4"]
+[ext_resource type="PackedScene" path="res://assets/effects/thorn_impact/thorn_impact.tscn" id="3_sdlbu"]
+
+[node name="projectile" type="Node2D" unique_id=1735637441]
+script = ExtResource("1_gt2s4")
+art_scene = ExtResource("2_gt2s4")
+impact_scene = ExtResource("3_sdlbu")

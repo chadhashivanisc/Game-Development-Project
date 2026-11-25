@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cy336mef8ofty"]
+
+[ext_resource type="Script" uid="uid://c0kf2mlqelawq" path="res://projectile.gd" id="1_5avn7"]
+[ext_resource type="PackedScene" path="res://assets/projectiles/soul_bolt/soul_bolt.tscn" id="2_5avn7"]
+[ext_resource type="PackedScene" path="res://assets/effects/soul_impact/soul_impact.tscn" id="3_3ksfc"]
+
+[node name="projectile" type="Node2D" unique_id=1735637441]
+script = ExtResource("1_5avn7")
+art_scene = ExtResource("2_5avn7")
+impact_scene = ExtResource("3_3ksfc")
