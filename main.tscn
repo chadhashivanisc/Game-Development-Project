@@ -52,12 +52,27 @@ alignment = 1
 
 [node name="livesLabel" type="Label" parent="UI/Bottom Bar" unique_id=440315722]
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "Lives: "
 
 [node name="goldLabel" type="Label" parent="UI/Bottom Bar" unique_id=285081584]
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "Gold: "
 
 [node name="Button" type="Button" parent="UI/Bottom Bar" unique_id=52654342]
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "Start Wave"
+
+[node name="GameOver" type="Label" parent="UI" unique_id=1909621623]
+visible = false
+offset_left = 600.0
+offset_top = 450.0
+offset_right = 966.0
+offset_bottom = 538.0
+theme_override_colors/font_color = Color(0.44705883, 1, 1, 1)
+theme_override_font_sizes/font_size = 78
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
