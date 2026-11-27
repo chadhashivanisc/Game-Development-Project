@@ -2,9 +2,8 @@ extends CanvasLayer
 
 @export var castle: Area2D
 
-@onready var lives_label: Label = $"Bottom Bar/livesLabel"
-@onready var gold_label: Label = $"Bottom Bar/goldLabel"
-
+@onready var lives_label: Label = find_child("livesLabel", true, false)
+@onready var gold_label: Label = find_child("goldLabel", true, false)
 
 func _ready() -> void:
 	GameState.gold_changed.connect(_on_gold_changed)

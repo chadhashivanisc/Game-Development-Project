@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cysye1wctqmxu"]
+
+[ext_resource type="Script" uid="uid://c0kf2mlqelawq" path="res://projectile.gd" id="1_jdtkr"]
+[ext_resource type="PackedScene" path="res://assets/projectiles/frost_shard/frost_shard.tscn" id="2_jdtkr"]
+[ext_resource type="PackedScene" path="res://assets/effects/frost_impact/frost_impact.tscn" id="3_shp7p"]
+
+[node name="projectile" type="Node2D" unique_id=1735637441]
+script = ExtResource("1_jdtkr")
+art_scene = ExtResource("2_jdtkr")
+impact_scene = ExtResource("3_shp7p")

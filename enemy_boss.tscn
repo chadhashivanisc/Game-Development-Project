@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://hjxabl50o4dv"]
+
+[ext_resource type="Script" uid="uid://ds5lhtfiyolhr" path="res://enemy.gd" id="1_ka1vu"]
+[ext_resource type="PackedScene" path="res://assets/enemies/ruin_behemoth/ruin_behemoth.tscn" id="2_ka1vu"]
+
+[node name="enemy" type="Area2D" unique_id=1109625214 groups=["enemy"]]
+script = ExtResource("1_ka1vu")
+speed = 25.0
+max_health = 600
+gold_reward = 250
+art_scene = ExtResource("2_ka1vu")
+art_scale = 0.8

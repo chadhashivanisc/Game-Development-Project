@@ -1,94 +1,96 @@
 extends Node2D
 
-@export var cols: int = 5
-@export var rows: int = 4
-@export var cell_w: int = 252
-@export var cell_h: int = 107
-@export var origin: Vector2 = Vector2(276, 410)
+const ROW_Y := [410, 520, 654, 808]   # 4 boundaries = 3 rows
+const ROW_W := [150, 158, 170]        # cell width per row
+const CENTRE_X := 726
+const COLS := 6
 
 var occupied: Dictionary = {}
-
-var tower_scene := preload("res://tower.tscn")
-var cannon_scene := preload("res://cannon.tscn")
-
-var selected_scene: PackedScene = tower_scene
+var hover: Polygon2D
 
 
 func _ready() -> void:
 	position = Vector2.ZERO
-	draw_grid()
+	hover = Polygon2D.new()
+	hover.color = Color(1, 0.85, 0.4, 0.25)
+	hover.visible = false
+	add_child(hover)
 
 
-func draw_grid() -> void:
-	var w := cols * cell_w
-	var h := rows * cell_h
-
-	for c in range(cols + 1):
-		var x := origin.x + c * cell_w
-		_make_bar(Vector2(x, origin.y), Vector2(2, h))
-
-	for r in range(rows + 1):
-		var y := origin.y + r * cell_h
-		_make_bar(Vector2(origin.x, y), Vector2(w, 2))
-
-
-func _make_bar(pos: Vector2, size: Vector2) -> void:
-	var p := Polygon2D.new()
-	p.polygon = PackedVector2Array([
-		pos,
-		pos + Vector2(size.x, 0),
-		pos + size,
-		pos + Vector2(0, size.y)
-	])
-	p.color = Color(1, 1, 1, 0.35)
-	add_child(p)
+func row_left(row: int) -> float:
+	return CENTRE_X - 3.0 * ROW_W[row]
 
 
 func cell_from_position(pos: Vector2) -> Vector2i:
-	var c := int((pos.x - origin.x) / cell_w)
-	var r := int((pos.y - origin.y) / cell_h)
-	return Vector2i(c, r)
+	var row := -1
+	for r in range(3):
+		if pos.y >= ROW_Y[r] and pos.y < ROW_Y[r + 1]:
+			row = r
+			break
+	if row < 0:
+		return Vector2i(-1, -1)
+
+	var col := int(floor((pos.x - row_left(row)) / ROW_W[row]))
+	return Vector2i(col, row)
 
 
 func is_valid_cell(cell: Vector2i) -> bool:
-	return cell.x >= 0 and cell.x < cols and cell.y >= 0 and cell.y < rows
+	return cell.y >= 0 and cell.y < 3 and cell.x >= 0 and cell.x < COLS
+
+
+func cell_rect(cell: Vector2i) -> Rect2:
+	var w: float = ROW_W[cell.y]
+	var x := row_left(cell.y) + cell.x * w
+	var y: float = ROW_Y[cell.y]
+	var h: float = ROW_Y[cell.y + 1] - y
+	return Rect2(x, y, w, h)
 
 
 func cell_center(cell: Vector2i) -> Vector2:
-	return origin + Vector2(
-		cell.x * cell_w + cell_w / 2.0,
-		cell.y * cell_h + cell_h / 2.0
-	)
+	var r := cell_rect(cell)
+	return r.position + r.size / 2.0
+
+
+func _process(_delta: float) -> void:
+	var cell := cell_from_position(get_viewport().get_mouse_position())
+
+	if not is_valid_cell(cell) or occupied.has(cell):
+		hover.visible = false
+		return
+
+	var r := cell_rect(cell)
+	hover.polygon = PackedVector2Array([
+		r.position,
+		r.position + Vector2(r.size.x, 0),
+		r.position + r.size,
+		r.position + Vector2(0, r.size.y)
+	])
+	hover.visible = true
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_1:
-			selected_scene = tower_scene
-			print("Selected: Brazier")
-		elif event.keycode == KEY_2:
-			selected_scene = cannon_scene
-			print("Selected: Mortar")
-
-	if event is InputEventMouseButton and event.pressed:
+	if event is InputEventMouseButton and event.pressed \
+			and event.button_index == MOUSE_BUTTON_LEFT:
 		var cell := cell_from_position(event.position)
-		if not is_valid_cell(cell):
-			return
-		if occupied.has(cell):
-			print("Cell already taken")
+		if not is_valid_cell(cell) or occupied.has(cell):
 			return
 		place_defense(cell)
 
 
 func place_defense(cell: Vector2i) -> void:
-	var d := selected_scene.instantiate()
-
-	if not GameState.spend(d.cost):
-		print("Not enough gold")
-		d.queue_free()
+	var d: Dictionary = GameState.info(GameState.selected_key)
+	if d.is_empty():
 		return
 
-	add_child(d)
-	d.global_position = cell_center(cell)
-	occupied[cell] = d
-	print("Placed at ", cell)
+	if not GameState.spend(d["cost"]):
+		print("Not enough gold")
+		return
+
+	var scene := load(d["scene"]) as PackedScene
+	if scene == null:
+		return
+
+	var node := scene.instantiate()
+	add_child(node)
+	node.global_position = cell_center(cell)
+	occupied[cell] = node

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d0m5hijymp2oa"]
+
+[ext_resource type="Script" uid="uid://ds5lhtfiyolhr" path="res://enemy.gd" id="1_pitur"]
+[ext_resource type="PackedScene" path="res://assets/enemies/iron_penitent/iron_penitent.tscn" id="2_pitur"]
+
+[node name="enemy" type="Area2D" unique_id=1109625214 groups=["enemy"]]
+script = ExtResource("1_pitur")
+speed = 35.0
+max_health = 90
+gold_reward = 35
+art_scene = ExtResource("2_pitur")

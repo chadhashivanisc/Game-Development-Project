@@ -1,38 +1,56 @@
 extends Node2D
 
 @onready var spawner := $spawner
-@onready var start_button := $"UI/Bottom Bar/Button"
-@onready var game_over_label := $UI/GameOver
-@onready var castle := $castle 
+@onready var castle := $castle
+@onready var banner := $UI/WaveBanner
+@onready var start_menu := $StartMenu
+
+var current_wave: int = 0
+var finished: bool = false
 
 
 func _ready() -> void:
-	start_button.pressed.connect(_on_start_pressed)
 	spawner.wave_cleared.connect(_on_wave_cleared)
 	spawner.all_waves_done.connect(_on_all_done)
 	castle.game_over.connect(_on_game_over)
-
-	for child in get_children():
-		if child is Node2D:
-			print(child.name, "  pos=", child.position, "  global=", child.global_position, "  scale=", child.scale)
+	start_menu.started.connect(_begin)
 
 
-func _on_start_pressed() -> void:
-	start_button.disabled = true
+func _begin() -> void:
+	await get_tree().create_timer(0.6).timeout
+	_next_wave()
+
+
+func _next_wave() -> void:
+	if finished:
+		return
+	current_wave += 1
+	banner.flash(current_wave)
+	await get_tree().create_timer(1.6).timeout
+	if finished:
+		return
 	spawner.start_wave()
 
 
 func _on_wave_cleared(wave_number: int) -> void:
-	GameState.add_gold(50)
-	start_button.disabled = false
-	print("Wave ", wave_number, " cleared.")
+	if finished:
+		return
+	GameState.add_gold(80)
+	print("Wave ", wave_number, " cleared")
+
+	if wave_number >= spawner.waves.size():
+		return
+
+	await get_tree().create_timer(5.0).timeout
+	_next_wave()
 
 
 func _on_all_done() -> void:
+	finished = true
 	print("YOU WIN")
-	start_button.disabled = true
-	
+
+
 func _on_game_over() -> void:
-	start_button.disabled = true
-	game_over_label.visible = true
-	get_tree().paused = true
+	finished = true
+	get_tree().call_group("enemies", "queue_free")
+	print("GAME OVER")

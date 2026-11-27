@@ -13,6 +13,68 @@
 [ext_resource type="PackedScene" path="res://assets/environment/bases/fortress_base/fortress_base.tscn" id="7_dg77c"]
 [ext_resource type="PackedScene" path="res://assets/environment/backgrounds/foreground_edges/foreground_edges.tscn" id="8_ycdy4"]
 [ext_resource type="Script" uid="uid://b8t2aaj0o6jf5" path="res://Scripts/UI/Bars.gd" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://cs6xefk74mpko" path="res://defense_bar.gd" id="14_getpj"]
+[ext_resource type="Script" uid="uid://dphv3elr3ewvj" path="res://start_menu.gd" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://dsh8vp6xmsrk2" path="res://assets/structures/ember_brazier/ember_brazier.png" id="15_82xsv"]
+[ext_resource type="Texture2D" uid="uid://7iokg8pq5u1s" path="res://assets/icon_coin.png" id="15_cegan"]
+[ext_resource type="StyleBox" uid="uid://bgrrflangna58" path="res://btn_normal.tres" id="15_yaehf"]
+[ext_resource type="StyleBox" uid="uid://c3tj7lenvwq16" path="res://btn_pressed.tres" id="16_074og"]
+[ext_resource type="Texture2D" uid="uid://dp1tgqkjtjuug" path="res://assets/structures/rune_mortar/rune_mortar.png" id="16_82xsv"]
+[ext_resource type="Texture2D" uid="uid://c6lxuy7pethqi" path="res://assets/structures/thorn_ballista/thorn_ballista.png" id="17_1u8w0"]
+[ext_resource type="StyleBox" uid="uid://b16nhoy25r5e7" path="res://btn_hover.tres" id="17_cegan"]
+[ext_resource type="Texture2D" uid="uid://tce76q6rsaa" path="res://assets/structures/frost_reliquary/frost_reliquary.png" id="18_0odxb"]
+[ext_resource type="Texture2D" uid="uid://4rqmnstk0gs1" path="res://assets/structures/soul_lantern_shrine/soul_lantern_shrine.png" id="19_lswn8"]
+[ext_resource type="Texture2D" uid="uid://pg5ed4htcv38" path="res://assets/icon_heart.png" id="21_0odxb"]
+[ext_resource type="Script" uid="uid://dgwo1b605de8q" path="res://wave_banner.gd" id="22_lswn8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryguw"]
+bg_color = Color(0.078431375, 0.101960786, 0.16862746, 0.92156863)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.61960787, 0.47843137, 0.21960784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d13ii"]
+bg_color = Color(0.14509805, 0.1882353, 0.3137255, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.78039217, 0.34901962, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7ogs"]
+bg_color = Color(0.101960786, 0.12156863, 0.1882353, 0.92156863)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.61960787, 0.47843137, 0.21960784, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4stk"]
+bg_color = Color(0.05490196, 0.06666667, 0.10980392, 0.96862745)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.61960787, 0.47843137, 0.21960784, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6tu0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5j85g"]
 
 [node name="main" type="Node2D" unique_id=401226079]
 script = ExtResource("1_lquwl")
@@ -43,28 +105,6 @@ script = ExtResource("3_1bvp3")
 script = ExtResource("13_ycdy4")
 castle = NodePath("../castle")
 
-[node name="Bottom Bar" type="HBoxContainer" parent="UI" unique_id=944557949]
-offset_left = 50.0
-offset_top = 900.0
-offset_right = 1450.0
-offset_bottom = 980.0
-alignment = 1
-
-[node name="livesLabel" type="Label" parent="UI/Bottom Bar" unique_id=440315722]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Lives: "
-
-[node name="goldLabel" type="Label" parent="UI/Bottom Bar" unique_id=285081584]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Gold: "
-
-[node name="Button" type="Button" parent="UI/Bottom Bar" unique_id=52654342]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Start Wave"
-
 [node name="GameOver" type="Label" parent="UI" unique_id=1909621623]
 visible = false
 offset_left = 600.0
@@ -76,3 +116,421 @@ theme_override_font_sizes/font_size = 78
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BarPanel" type="PanelContainer" parent="UI" unique_id=1774467570]
+offset_top = 820.0
+offset_right = 1536.0
+offset_bottom = 1083.0
+
+[node name="BarMargin" type="MarginContainer" parent="UI/BarPanel" unique_id=355924267]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Bottom Bar" type="HBoxContainer" parent="UI/BarPanel/BarMargin" unique_id=944557949]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+script = ExtResource("14_getpj")
+
+[node name="BrazierSlot" type="VBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar" unique_id=1105528097]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="BrazierButton" type="Button" parent="UI/BarPanel/BarMargin/Bottom Bar/BrazierSlot" unique_id=1966207789]
+custom_minimum_size = Vector2(160, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+icon = ExtResource("15_82xsv")
+expand_icon = true
+
+[node name="CostMargin" type="MarginContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/BrazierSlot" unique_id=1011788319]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="CostRow" type="HBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/BrazierSlot/CostMargin" unique_id=1215308834]
+layout_mode = 2
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="UI/BarPanel/BarMargin/Bottom Bar/BrazierSlot/CostMargin/CostRow" unique_id=1433018227]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("15_cegan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CostLabel" type="Label" parent="UI/BarPanel/BarMargin/Bottom Bar/BrazierSlot/CostMargin/CostRow" unique_id=1043556797]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 26
+text = "50"
+horizontal_alignment = 1
+
+[node name="MortarSlot" type="VBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar" unique_id=1111865382]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="MortarButton" type="Button" parent="UI/BarPanel/BarMargin/Bottom Bar/MortarSlot" unique_id=1591226869]
+custom_minimum_size = Vector2(160, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+icon = ExtResource("16_82xsv")
+expand_icon = true
+
+[node name="CostMargin" type="MarginContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/MortarSlot" unique_id=316726783]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="CostRow" type="HBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/MortarSlot/CostMargin" unique_id=1339595122]
+layout_mode = 2
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="UI/BarPanel/BarMargin/Bottom Bar/MortarSlot/CostMargin/CostRow" unique_id=447426094]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("15_cegan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CostLabel" type="Label" parent="UI/BarPanel/BarMargin/Bottom Bar/MortarSlot/CostMargin/CostRow" unique_id=1511754460]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 26
+text = "120"
+horizontal_alignment = 1
+
+[node name="BallistaSlot" type="VBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar" unique_id=1686625739]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="BallistaButton" type="Button" parent="UI/BarPanel/BarMargin/Bottom Bar/BallistaSlot" unique_id=2126743852]
+custom_minimum_size = Vector2(160, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+icon = ExtResource("17_1u8w0")
+expand_icon = true
+
+[node name="CostMargin" type="MarginContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/BallistaSlot" unique_id=406060959]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="CostRow" type="HBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/BallistaSlot/CostMargin" unique_id=1312279711]
+layout_mode = 2
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="UI/BarPanel/BarMargin/Bottom Bar/BallistaSlot/CostMargin/CostRow" unique_id=1404783561]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("15_cegan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CostLabel" type="Label" parent="UI/BarPanel/BarMargin/Bottom Bar/BallistaSlot/CostMargin/CostRow" unique_id=1442551233]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 26
+text = "150"
+horizontal_alignment = 1
+
+[node name="FrostSlot" type="VBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar" unique_id=199502126]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="FrostButton" type="Button" parent="UI/BarPanel/BarMargin/Bottom Bar/FrostSlot" unique_id=1168885548]
+custom_minimum_size = Vector2(160, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+icon = ExtResource("18_0odxb")
+expand_icon = true
+
+[node name="CostMargin" type="MarginContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/FrostSlot" unique_id=1487085783]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="CostRow" type="HBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/FrostSlot/CostMargin" unique_id=1649298503]
+layout_mode = 2
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="UI/BarPanel/BarMargin/Bottom Bar/FrostSlot/CostMargin/CostRow" unique_id=1666188039]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("15_cegan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CostLabel" type="Label" parent="UI/BarPanel/BarMargin/Bottom Bar/FrostSlot/CostMargin/CostRow" unique_id=1936911545]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 26
+text = "200"
+horizontal_alignment = 1
+
+[node name="ShrineSlot" type="VBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar" unique_id=825499548]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ShrineButton" type="Button" parent="UI/BarPanel/BarMargin/Bottom Bar/ShrineSlot" unique_id=633974621]
+custom_minimum_size = Vector2(160, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ryguw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d13ii")
+icon = ExtResource("19_lswn8")
+expand_icon = true
+
+[node name="CostMargin" type="MarginContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/ShrineSlot" unique_id=955537842]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="CostRow" type="HBoxContainer" parent="UI/BarPanel/BarMargin/Bottom Bar/ShrineSlot/CostMargin" unique_id=1983554290]
+layout_mode = 2
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="UI/BarPanel/BarMargin/Bottom Bar/ShrineSlot/CostMargin/CostRow" unique_id=1809917828]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("15_cegan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CostLabel" type="Label" parent="UI/BarPanel/BarMargin/Bottom Bar/ShrineSlot/CostMargin/CostRow" unique_id=365639863]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 26
+text = "250"
+horizontal_alignment = 1
+
+[node name="TopBar" type="HBoxContainer" parent="UI" unique_id=1010992875]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 64.0
+theme_override_constants/separation = 28
+
+[node name="LivesPill2" type="PanelContainer" parent="UI/TopBar" unique_id=1978233870]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7ogs")
+
+[node name="LivesMargin" type="MarginContainer" parent="UI/TopBar/LivesPill2" unique_id=620449149]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 6
+
+[node name="LivesRow" type="HBoxContainer" parent="UI/TopBar/LivesPill2/LivesMargin" unique_id=1031946596]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LivesIcon" type="TextureRect" parent="UI/TopBar/LivesPill2/LivesMargin/LivesRow" unique_id=1766066874]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("21_0odxb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="livesLabel" type="Label" parent="UI/TopBar/LivesPill2/LivesMargin/LivesRow" unique_id=612373618]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92941177, 0.9019608, 0.81960785, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+
+[node name="GoldPill" type="PanelContainer" parent="UI/TopBar" unique_id=689207419]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7ogs")
+
+[node name="GoldMargin" type="MarginContainer" parent="UI/TopBar/GoldPill" unique_id=259178406]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 6
+
+[node name="GoldRow" type="HBoxContainer" parent="UI/TopBar/GoldPill/GoldMargin" unique_id=1574427542]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CoinIcon" type="TextureRect" parent="UI/TopBar/GoldPill/GoldMargin/GoldRow" unique_id=980335797]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("15_cegan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="goldLabel" type="Label" parent="UI/TopBar/GoldPill/GoldMargin/GoldRow" unique_id=559366474]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 30
+text = "200"
+
+[node name="WaveBanner" type="Label" parent="UI" unique_id=288600575]
+visible = false
+offset_top = 300.0
+offset_right = 1536.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 96
+text = "WAVE 1"
+horizontal_alignment = 1
+script = ExtResource("22_lswn8")
+
+[node name="StartMenu" type="CanvasLayer" parent="." unique_id=2094491288]
+script = ExtResource("14_w48qg")
+
+[node name="Dim" type="ColorRect" parent="StartMenu" unique_id=1229521911]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Panel" type="PanelContainer" parent="StartMenu/Dim" unique_id=546019544]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 242.0
+offset_right = 1188.0
+offset_bottom = 782.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h4stk")
+
+[node name="Margin" type="MarginContainer" parent="StartMenu/Dim/Panel" unique_id=82006612]
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="StartMenu/Dim/Panel/Margin" unique_id=746257764]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Title" type="Label" parent="StartMenu/Dim/Panel/Margin/VBox" unique_id=1790384192]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 52
+text = "KINGDOM DEFENSE"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="StartMenu/Dim/Panel/Margin/VBox" unique_id=27162567]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6509804, 0.78039217, 1)
+theme_override_font_sizes/font_size = 22
+text = "Hold the castle until dawn"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="StartMenu/Dim/Panel/Margin/VBox" unique_id=1720680431]
+custom_minimum_size = Vector2(300, 76)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_colors/font_hover_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("15_yaehf")
+theme_override_styles/pressed = ExtResource("16_074og")
+theme_override_styles/hover = ExtResource("17_cegan")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o6tu0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5j85g")
+text = "PLAY"
+
+[node name="HowToButton" type="Button" parent="StartMenu/Dim/Panel/Margin/VBox" unique_id=194870865]
+custom_minimum_size = Vector2(300, 76)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_colors/font_hover_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("15_yaehf")
+theme_override_styles/pressed = ExtResource("16_074og")
+theme_override_styles/hover = ExtResource("17_cegan")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o6tu0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5j85g")
+text = "HOW TO PLAY"
+
+[node name="QuitButton" type="Button" parent="StartMenu/Dim/Panel/Margin/VBox" unique_id=1916285275]
+custom_minimum_size = Vector2(300, 76)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_colors/font_hover_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("15_yaehf")
+theme_override_styles/pressed = ExtResource("16_074og")
+theme_override_styles/hover = ExtResource("17_cegan")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o6tu0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5j85g")
+text = "QUIT"
+
+[node name="HowToPanel" type="PanelContainer" parent="StartMenu/Dim" unique_id=1218448133]
+visible = false
+layout_mode = 0
+offset_left = 348.0
+offset_top = 242.0
+offset_right = 1188.0
+offset_bottom = 782.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h4stk")
+
+[node name="Margin" type="MarginContainer" parent="StartMenu/Dim/HowToPanel" unique_id=602156128]
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="StartMenu/Dim/HowToPanel/Margin" unique_id=521040863]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Title" type="Label" parent="StartMenu/Dim/HowToPanel/Margin/VBox" unique_id=103768969]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78039217, 0.34901962, 1)
+theme_override_font_sizes/font_size = 52
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="StartMenu/Dim/HowToPanel/Margin/VBox" unique_id=1453362817]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92941177, 0.9019608, 0.81960785, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Buy defences in the shop after each wave.
+
+2. Pick one from the bar at the bottom, then click a tile to place it.
+
+3. Press Start Wave when you are ready. Survive five waves and defeat the behemoth."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BackButton" type="Button" parent="StartMenu/Dim/HowToPanel/Margin/VBox" unique_id=1065345536]
+custom_minimum_size = Vector2(300, 76)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_colors/font_hover_color = Color(0.12156863, 0.09019608, 0.03137255, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("15_yaehf")
+theme_override_styles/pressed = ExtResource("16_074og")
+theme_override_styles/hover = ExtResource("17_cegan")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o6tu0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5j85g")
+text = "Return"
