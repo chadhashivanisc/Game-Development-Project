@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c65wgjfctrlmr"]
 
 [ext_resource type="Script" uid="uid://bh5umwjvxfgtg" path="res://tower.gd" id="1_23j6s"]
-[ext_resource type="PackedScene" path="res://assets/structures/rune_mortar/rune_mortar.tscn" id="2_23j6s"]
+[ext_resource type="PackedScene" path="res://assets/structures/rune_mortar/rune_mortar_rig.tscn" id="2_72ky0"]
 [ext_resource type="PackedScene" uid="uid://rmntckqqnmok" path="res://shell_projectile.tscn" id="3_72ky0"]
 
 [node name="cannon" type="Node2D" unique_id=1926975032]
@@ -10,7 +10,8 @@ cost = 120
 damage = 45
 fire_rate = 0.4
 attack_range = 180.0
-art_scene = ExtResource("2_23j6s")
+art_scene = ExtResource("2_72ky0")
+art_scale = 1.0
 projectile_scene = ExtResource("3_72ky0")
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=1831444832]

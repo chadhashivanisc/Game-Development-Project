@@ -1,7 +1,7 @@
 extends Node2D
 
-const ROW_Y := [410, 520, 654, 808]   # 4 boundaries = 3 rows
-const ROW_W := [150, 158, 170]        # cell width per row
+const ROW_Y := [410, 520, 654, 808]
+const ROW_W := [150, 158, 170]
 const CENTRE_X := 726
 const COLS := 6
 
@@ -29,7 +29,6 @@ func cell_from_position(pos: Vector2) -> Vector2i:
 			break
 	if row < 0:
 		return Vector2i(-1, -1)
-
 	var col := int(floor((pos.x - row_left(row)) / ROW_W[row]))
 	return Vector2i(col, row)
 
@@ -52,6 +51,10 @@ func cell_center(cell: Vector2i) -> Vector2:
 
 
 func _process(_delta: float) -> void:
+	for key in occupied.keys():
+		if not is_instance_valid(occupied[key]):
+			occupied.erase(key)
+
 	var cell := cell_from_position(get_viewport().get_mouse_position())
 
 	if not is_valid_cell(cell) or occupied.has(cell):
@@ -93,5 +96,7 @@ func place_defense(cell: Vector2i) -> void:
 
 	var node := scene.instantiate()
 	add_child(node)
-	node.global_position = cell_center(cell)
+	var r := cell_rect(cell)
+	node.global_position = r.position + Vector2(r.size.x / 2.0, r.size.y * 0.55)
+	node.z_index = 100
 	occupied[cell] = node

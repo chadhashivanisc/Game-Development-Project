@@ -16,20 +16,20 @@ var enemy_scenes := {
 
 # Each wave is a list of groups. Groups spawn one after another.
 var waves: Array = [
-	[ {"type": "thrall", "count": 4, "gap": 1.2} ],
+	[ {"type": "thrall", "count": 4, "gap": 1.6} ],
 
-	[ {"type": "thrall", "count": 4, "gap": 1.0},
-	  {"type": "hound",  "count": 3, "gap": 0.7} ],
+	[ {"type": "thrall", "count": 4, "gap": 1.4},
+	  {"type": "hound",  "count": 3, "gap": 1.2} ],
 
-	[ {"type": "hound",    "count": 5, "gap": 0.6},
-	  {"type": "penitent", "count": 2, "gap": 1.5} ],
+	[ {"type": "hound",    "count": 5, "gap": 1.1},
+	  {"type": "penitent", "count": 2, "gap": 2.0} ],
 
-	[ {"type": "thrall",   "count": 6, "gap": 0.8},
-	  {"type": "penitent", "count": 4, "gap": 1.2},
-	  {"type": "hound",    "count": 4, "gap": 0.5} ],
+	[ {"type": "thrall",   "count": 6, "gap": 1.3},
+	  {"type": "penitent", "count": 4, "gap": 1.8},
+	  {"type": "hound",    "count": 4, "gap": 1.0} ],
 
-	[ {"type": "hound",    "count": 6, "gap": 0.5},
-	  {"type": "penitent", "count": 3, "gap": 1.0},
+	[ {"type": "hound",    "count": 6, "gap": 1.0},
+	  {"type": "penitent", "count": 3, "gap": 1.6},
 	  {"type": "boss",     "count": 1, "gap": 2.0} ],
 ]
 
@@ -82,6 +82,9 @@ func _process(delta: float) -> void:
 			print("--- WAVE ", current_wave + 1, " CLEARED ---")
 
 
+var last_lane: int = -1
+
+
 func spawn_next() -> void:
 	if queue.is_empty():
 		spawning = false
@@ -90,7 +93,15 @@ func spawn_next() -> void:
 	var scene: PackedScene = queue.pop_front()
 	spawn_timer = gaps.pop_front()
 
+	# don't use the same lane twice in a row
+	var lane := randi() % lane_ys.size()
+	if lane == last_lane and lane_ys.size() > 1:
+		lane = (lane + 1 + (randi() % (lane_ys.size() - 1))) % lane_ys.size()
+	last_lane = lane
+
 	var e := scene.instantiate()
 	get_parent().add_child(e)
-	var y: int = lane_ys[randi() % lane_ys.size()]
-	e.global_position = Vector2(spawn_x, y)
+	e.global_position = Vector2(
+		 spawn_x + randf_range(0.0, 140.0),
+		lane_ys[lane]
+	)

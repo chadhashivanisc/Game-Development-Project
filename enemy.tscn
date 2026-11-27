@@ -5,4 +5,6 @@
 
 [node name="enemy" type="Area2D" unique_id=1109625214 groups=["enemy"]]
 script = ExtResource("1_7k104")
+max_health = 60
 art_scene = ExtResource("2_4gyqm")
+art_scale = 1.0

@@ -5,7 +5,6 @@
 
 [node name="enemy" type="Area2D" unique_id=1109625214 groups=["enemy"]]
 script = ExtResource("1_nqqyr")
-speed = 130.0
-max_health = 20
-gold_reward = 15
+max_health = 80
 art_scene = ExtResource("2_nqqyr")
+art_scale = 1.0

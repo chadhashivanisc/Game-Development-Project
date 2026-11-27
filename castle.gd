@@ -9,7 +9,7 @@ signal game_over
 
 func _ready() -> void:
 	lives = max_lives
-	global_position = Vector2(100, 512)
+	global_position = Vector2(280, 512)
 
 	var shape := RectangleShape2D.new()
 	shape.size = Vector2(60, 1024)

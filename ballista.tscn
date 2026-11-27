@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvl8jitf6ty7o"]
 
 [ext_resource type="Script" uid="uid://bh5umwjvxfgtg" path="res://tower.gd" id="1_o6pwy"]
-[ext_resource type="PackedScene" path="res://assets/structures/thorn_ballista/thorn_ballista.tscn" id="2_o6pwy"]
+[ext_resource type="PackedScene" path="res://assets/structures/thorn_ballista/thorn_ballista_rig.tscn" id="2_o6pwy"]
 [ext_resource type="PackedScene" uid="uid://mu1ncv5vwuos" path="res://thorn_projectile.tscn" id="3_x7upx"]
 
 [node name="ballista" type="Node2D" unique_id=1926975032]
@@ -11,6 +11,7 @@ damage = 20
 fire_rate = 0.8
 attack_range = 320.0
 art_scene = ExtResource("2_o6pwy")
+art_scale = 1.0
 projectile_scene = ExtResource("3_x7upx")
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=1831444832]
