@@ -83,7 +83,8 @@ func place_defense(cell: Vector2i) -> void:
 		return
 
 	if not GameState.spend(d["cost"]):
-		print("Not enough gold")
+		print("Cannot afford ", GameState.selected_key,
+			" costing ", d["cost"], " — you have ", GameState.gold)
 		return
 
 	var scene := load(d["scene"]) as PackedScene

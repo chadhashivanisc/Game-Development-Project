@@ -13,7 +13,7 @@ const DEFENSES := [
 	{"key": "shrine",   "name": "Shrine",   "cost": 250,
 	 "scene": "res://shrine.tscn",
 	 "icon": "res://assets/structures/soul_lantern_shrine/soul_lantern_shrine.png"},
-	{"key": "cannon",   "name": "Mortar",   "cost": 350,
+	{"key": "cannon",   "name": "Mortar",   "cost": 120,
 	 "scene": "res://cannon.tscn",
 	 "icon": "res://assets/structures/rune_mortar/rune_mortar.png"},
 ]

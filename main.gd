@@ -4,6 +4,7 @@ extends Node2D
 @onready var castle := $castle
 @onready var banner := $UI/WaveBanner
 @onready var start_menu := $StartMenu
+@onready var game_over_label := $UI/GameOver
 
 var current_wave: int = 0
 var finished: bool = false
@@ -53,4 +54,4 @@ func _on_all_done() -> void:
 func _on_game_over() -> void:
 	finished = true
 	get_tree().call_group("enemies", "queue_free")
-	print("GAME OVER")
+	game_over_label.visible = true
